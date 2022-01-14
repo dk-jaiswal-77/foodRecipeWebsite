@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai - Latest Reciepe</title>
+    <link rel="stylesheet" href="./styles/navBar.css">
+    <link rel="stylesheet" href="./styles/navBar_search_floating.css">
+    <link rel="stylesheet" href="./styles/show_searchedMeal.css">
+
+</head>
+<body>
+    <!-- import the contents of headers  -->
+    <header></header>
+
+    <!-- hidden initially, this is to show available options while searching -->
+    <div id="search_floating"></div>
+
+    <!-- container containing random food items to display on page -->
+    <div id="meals_container"></div>
+
+    <!-- container containing receipe details of single meal -->
+    <div id="recipe_container"></div>
+    
+</body>
+</html>
+<script type="module">
+    // for inserting navBar into page 
+    import navBar from "./components/navBar.js";
+    document.querySelector("header").innerHTML = navBar();
+    // --------------------------------------------------------------------------------------->
+
+    // getting contents of recipeContainer
+    import {recipeContainer} from "./components/recipe_container.js";
+    let recipe_container = document.querySelector("#recipe_container");
+    recipe_container.innerHTML = recipeContainer();
+    recipe_container.style.display = "none";
+
+    // ------------------------------------------------------------------------------------>
+
+    // search functionality for search box  // debouncing concept // displaying the selectedSearch meal on this page
+    document.querySelector("#search_box").addEventListener("beforeinput", dilemma_for_network_request);
+
+    var timeout_id;
+    const url = "";
+
+    import {dilemma_for_network_request, make_network_request, show_searchList, show_searchedMeal_recipe, get_meal_recipe_by_id, display_mealRecipe} from "./components/searchBox_debouncing.js";
+
+    // ---------------------------------------------------------------------------------------->
+
+    // displaying the latest recipe on this page
+    async function get_the_latest_recipe(meal_id)
+    {
+        try{
+            let response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal_id}`);
+            let data = await response.json();
+            // console.log(data.meals[0]);
+            display_mealRecipe(data.meals[0]);
+        }
+        catch (error){
+            console.log(error);
+        }
+    }
+
+    get_the_latest_recipe("52772");
+</script>

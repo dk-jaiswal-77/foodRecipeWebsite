@@ -1,0 +1,109 @@
+body{
+    /* background-color: black; */
+    margin: 0px;
+}
+h3, h1{
+    margin: 0px;
+}
+nav{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    padding: 1% 0%;
+    padding-right: 0.7%;
+    background-color: #fedfe5;
+    width: 100%;
+    box-sizing: border-box;
+}
+nav > div.left{
+    /* border: 1px solid red; */
+    width: 32%;
+    display: flex;
+    align-items: center;
+}
+nav > div.left > *{
+    /* border: 1px solid green; */
+}
+nav > div.left > div#userProfile{
+    margin: 0% 6%;
+    border: 1px solid #ed0331;
+    border-radius: 4px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+nav > div.left > div#userProfile > h5{
+    color: #1a202c;
+}
+nav > div.left > div#userProfile > h3{
+    color: #ed0331;
+    padding-top: 1%;
+}
+nav > div.left > div#userProfile > *{
+    /* border: 1px solid black; */
+    margin: 0%;
+}
+nav > div.left > h1{
+    color: #fc8019;
+}
+
+nav > div.aside{
+    /* border: 1px solid red; */
+}
+nav > div.mid{
+    width: 43%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+}
+nav > div.mid > input{
+    width: 87%;
+    padding: 1.6%;
+    font-size: 100%;
+    color: grey;
+    border: 1px solid #fc8019;
+}
+nav > div.mid > div#search_logo{
+    /* border: 1px solid red; */
+    width: 13%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fc8019;
+}
+nav > div.mid > div#search_logo > img{
+    width: 33%;
+    /* border: 1px solid green; */
+}
+nav > div.mid > div#search_logo:hover{
+    cursor: pointer;
+}
+nav > div.right{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5%;
+}
+nav > div.right > a{
+    text-decoration: none;
+    border: 1px solid #ed0331;
+    color: white;
+    padding: 2%;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    background-color: #ed0331;
+}
+nav > div.right > a:hover{
+    background-color: white;
+    color: #ed0331;
+    cursor: pointer;
+}
+nav > div.right > a:active{
+    background-color: #ed0331;
+    color: white;
+}

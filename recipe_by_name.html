@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai - Reciepe By Name</title>
+    <link rel="stylesheet" href="./styles/navBar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/navBar_search_floating.css">
+    <link rel="stylesheet" href="./styles/show_random_meals.css">
+    <link rel="stylesheet" href="./styles/show_searchedMeal.css">
+
+    <style></style>
+    <title>Masai - Search Recipe By Name</title>
+</head>
+<body>
+    <!-- import the contents of headers  -->
+    <header></header>
+
+    <!-- hidden initially, this is to show available options while searching -->
+    <div id="search_floating"></div>
+
+    <!-- container containing random food items to display on page -->
+    <div id="meals_container"></div>
+
+    <!-- container containing receipe details of single meal -->
+    <div id="recipe_container"></div>
+
+</body>
+</html>
+
+
+<script type="module">
+    //  for inserting navBar into page 
+    import navBar from "./components/navBar.js";
+    document.querySelector("header").innerHTML = navBar();
+
+    //---------------------------------------------------------------------------------->
+
+    
+    // getting contents of recipeContainer
+    import {recipeContainer} from "./components/recipe_container.js";
+    document.querySelector("#recipe_container").innerHTML = recipeContainer();
+    // ------------------------------------------------------------------------------------>
+
+
+    // search functionality for search box  // debouncing concept // displaying the searched selected meal on the same page
+    document.querySelector("#search_box").addEventListener("beforeinput", dilemma_for_network_request);
+
+    var timeout_id;
+    const url = "";
+
+    import {dilemma_for_network_request, make_network_request, show_searchList, show_searchedMeal_recipe, get_meal_recipe_by_id, display_mealRecipe} from "./components/searchBox_debouncing.js";
+
+    // --------------------------------------------------------------------->
+    
+
+
+    // especially for this page // displaying random meals on this page 
+
+    import {get_list_of_meals, displayMeals} from "./components/show_random_meals.js";
+
+    get_list_of_meals("c");
+    
+    // ---------------------------------------------------------------------------------->
+
+
+    // upon selecting any meal, it's recipe is displayed on the same page 
+  
+
+</script>
