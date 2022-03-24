@@ -13,6 +13,12 @@ https://github.com/dk-jaiswal-77/foodRecipeWebsite
 
 ---
 
+# Live Demo:
+
+https://food-recipe-website-gamma.vercel.app/
+
+---
+
 ### About this project: :raised_hands:
 
 > It is a solo project executed in 3 days as a side project of mine. It is an online website for serching recipe of varities of meals along with YouTube video tutorials.
