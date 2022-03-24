@@ -7,7 +7,7 @@
 ---
 # Welcome :wave:
 ---
-# Link to our Project website:
+# Link to Project website:
 
 https://github.com/dk-jaiswal-77/foodRecipeWebsite
 
@@ -15,7 +15,7 @@ https://github.com/dk-jaiswal-77/foodRecipeWebsite
 
 ### About this project: :raised_hands:
 
-> It is a solo project executed in 3 days as a side project of mine.
+> It is a solo project executed in 3 days as a side project of mine. It is an online website for serching recipe of varities of meals along with YouTube video tutorials.
 
 ---
 
